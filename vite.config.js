@@ -20,7 +20,7 @@ const config = {
 				presetWebFonts({
 					provider: "google",
 					fonts: {
-						"sans": ["IBM Plex Sans", "sans-serif"],
+						"sans": ["Inter", "Inter:300"],
 					}
 				})
 			],
