@@ -1,19 +1,64 @@
-<h1>
-	<span class="font-bold pt-12">Verite's </span>
-	wepapplication template
-</h1>
+<script lang="ts">
+	const download = (data: string, filename: string) => {
+		const link = document.createElement("a");
 
-<div class="flex justify-between items-center py-12">
-	<div class="i-ph-anchor-simple-thin" />
-	<!-- An orange alarm from Material Design Icons -->
-	<div class="i-mdi-alarm text-orange-400" />
-	<!-- A large Vue logo -->
-	<div class="i-logos-vue text-3xl" />
+		link.setAttribute(
+			"href",
+			"data:text/plain;charset=utf-8," + encodeURIComponent(data)
+		);
 
-	<div class="i-logos-deno text-4xl" />
+		link.setAttribute("download", filename || "data.json");
+		link.style.display = "none";
 
-	<div class="i-logos-svelte text-5xl" />
+		document.body.appendChild(link);
 
-	<!-- Sun in light mode, Moon in dark mode, from Carbon -->
-	<button class="i-carbon-sun dark:i-carbon-moon" />
-</div>
+		link.click();
+
+		document.body.removeChild(link);
+	};
+
+	import { onMount } from "svelte";
+	import type { ActionData } from "./$types";
+	export let form: ActionData;
+	import toast from "svelte-french-toast";
+
+	onMount(() => {
+		if (form?.body.data) {
+			download(form.body.data, "export.json");
+		}
+
+		if (form?.body.error) {
+			toast.error(form.body.error);
+		}
+	});
+</script>
+
+<main
+	class="flex justify-center items-center justify-center h-screen w-screen flex-col font-sans"
+>
+	<h2 class="text-3xl py-8 capitalize">MongoDB exporter</h2>
+	<form method="post" action="?/export">
+		<input
+			type="text"
+			placeholder="database url"
+			name="db_url"
+			class="border-2 rounded-md px-4 py-3 w-96"
+		/>
+		<button class="bg-blue-500 py-3 px-6 text-white rounded-sm"
+			>submit</button
+		>
+	</form>
+</main>
+
+<!--Always stay at the bottom-->
+
+<footer class="absolute bottom-0 w-full h-16 flex justify-center items-center">
+	<p>
+		hand crafted by <a
+			href="https://github.com/veritem"
+			target="_blank"
+			rel="noopener noreferrer"
+			class="text-blue-500">veritem</a
+		>
+	</p>
+</footer>

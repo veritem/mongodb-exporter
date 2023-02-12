@@ -1,11 +1,7 @@
-### wesbite name 
+### mongodb exporter
 
-> App description 
+This project aims to help anyone to easily export data from mongodb database to a json file. It opensouce for transparency! 
 
-## Getting started
+### License
 
-
-
-## Developing
-
-
+[MIT](LICENSE) - &copy; 2023 - Present [@veritem](https://github.com/veritem)
