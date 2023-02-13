@@ -1,6 +1,6 @@
 ### mongodb exporter
 
-This project aims to help anyone to easily export data from mongodb database to a json file. It opensouce for transparency! 
+This project aims to help anyone to easily export data from mongodb database to a json file. It's opensouce for transparency! 
 
 ### License
 
