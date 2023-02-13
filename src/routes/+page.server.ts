@@ -18,7 +18,12 @@ export const actions = {
 				return { [collection]: data }
 			}))
 
-			return { status: 200, body: { data: JSON.stringify(jsonData) } }
+
+			return {
+				status: 200, body: {
+					data: JSON.stringify(jsonData.reduce((acc, curr) => ({ ...acc, ...curr }), {}))
+				}
+			}
 		} catch (error) {
 			return { status: 500, body: { error: "Invalid mongodb connection string" } }
 		}

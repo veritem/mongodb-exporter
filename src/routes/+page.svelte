@@ -33,6 +33,12 @@
 	});
 </script>
 
+<svelte:head>
+	<title>Export mongoDB</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="description" content="Export mongoDB" />
+</svelte:head>
+
 <main
 	class="flex justify-center items-center justify-center h-screen w-screen flex-col font-sans"
 >
