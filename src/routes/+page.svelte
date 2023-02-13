@@ -46,7 +46,7 @@
 	<form method="post" action="?/export">
 		<input
 			type="text"
-			placeholder="database url"
+			placeholder="protocol://makuza:password@database_host/database_name"
 			name="db_url"
 			class="border-2 rounded-md px-4 py-3 w-96"
 		/>
