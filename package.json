@@ -13,31 +13,32 @@
 		"lint": "eslint ."
 	},
 	"devDependencies": {
-		"@iconify/json": "^2.2.33",
-		"@playwright/test": "^1.31.2",
-		"@sveltejs/adapter-vercel": "^2.3.1",
-		"@sveltejs/kit": "^1.11.0",
-		"@typescript-eslint/eslint-plugin": "^5.54.1",
-		"@typescript-eslint/parser": "^5.54.1",
-		"@unocss/preset-icons": "^0.50.4",
-		"@unocss/preset-web-fonts": "^0.50.4",
-		"eslint": "^8.35.0",
+		"@iconify/json": "^2.2.48",
+		"@playwright/test": "^1.32.2",
+		"@sveltejs/adapter-vercel": "^2.4.1",
+		"@sveltejs/kit": "^1.15.2",
+		"@typescript-eslint/eslint-plugin": "^5.57.1",
+		"@typescript-eslint/parser": "^5.57.1",
+		"@unocss/preset-icons": "^0.51.2",
+		"@unocss/preset-web-fonts": "^0.51.2",
+		"eslint": "^8.38.0",
 		"eslint-plugin-svelte3": "^4.0.0",
-		"svelte": "^3.56.0",
-		"svelte-check": "^3.1.2",
+		"svelte": "^3.58.0",
+		"svelte-check": "^3.2.0",
 		"tslib": "^2.5.0",
-		"typescript": "^4.9.5",
-		"vite": "^4.1.4",
-		"vitest": "^0.29.2"
+		"typescript": "^5.0.4",
+		"vite": "^4.2.1",
+		"vitest": "^0.30.0"
 	},
 	"type": "module",
 	"dependencies": {
-		"@unocss/core": "^0.50.4",
-		"@unocss/eslint-config": "^0.50.4",
-		"@unocss/preset-uno": "^0.50.4",
-		"@unocss/reset": "^0.50.4",
-		"mongodb": "^5.1.0",
+		"@unocss/core": "^0.51.2",
+		"@unocss/eslint-config": "^0.51.2",
+		"@unocss/extractor-svelte": "^0.51.2",
+		"@unocss/preset-uno": "^0.51.2",
+		"@unocss/reset": "^0.51.2",
+		"mongodb": "^5.2.0",
 		"svelte-french-toast": "^1.0.3",
-		"unocss": "^0.50.4"
+		"unocss": "^0.51.2"
 	}
 }
